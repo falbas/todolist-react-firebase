@@ -4,12 +4,12 @@ import firebase from '../firebase';
 
 const Todo = ({todo}) => {
   const deleteTodo = () => {
-    const todoRef = firebase.database().ref('Todo').child(todo.id);
+    const todoRef = firebase.database().ref('todos').child(todo.id);
     todoRef.remove();
   }
 
   const completeTodo = () => {
-    const todoRef = firebase.database().ref('Todo').child(todo.id);
+    const todoRef = firebase.database().ref('todos').child(todo.id);
     todoRef.update({
       complete: !todo.complete,
     });
