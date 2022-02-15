@@ -1,9 +1,17 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true,
     "todos": {
+      ".read": true,
+      "$uid" : {
+        ".write": true
+      },
       ".indexOn": "user"
+    }, 
+    "users" : {
+    	"$uid" : {
+    		".read": true,
+      	".write": true 
+      }
     }
   }
 }
