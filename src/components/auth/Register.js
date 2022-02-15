@@ -43,20 +43,20 @@ const Register = () => {
         <div className="text-center m-3">
           <h1>Register</h1>
         </div>
-        <Col xs="3">
+        <Col xs="12" md="5" xl="4">
           <Form.Group as={Row} className="mb-3">
-            <Form.Label column sm={3}>
+            <Form.Label column xs="3">
               Username
             </Form.Label>
-            <Col sm={9}>
+            <Col xs="9">
               <Form.Control type="text" placeholder="Username" onChange={handleUsernameOnChange} value={getUsername} />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
-            <Form.Label column sm={3}>
+            <Form.Label column xs="3">
               Password
             </Form.Label>
-            <Col sm={9}>
+            <Col xs="9">
               <Form.Control type="password" placeholder="Password" onChange={handlePasswordOnChange} value={getPassword} />
             </Col>
             <div className="text-end">

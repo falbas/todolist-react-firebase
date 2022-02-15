@@ -1,6 +1,5 @@
 import { Nav, NavDropdown, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import Login from './auth/Login';
 
 const TodoHeader = () => {
   const login = localStorage.getItem("login");
