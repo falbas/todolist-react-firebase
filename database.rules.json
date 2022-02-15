@@ -8,9 +8,9 @@
       ".indexOn": "user"
     }, 
     "users" : {
-    	"$uid" : {
-    		".read": true,
-      	".write": true 
+      "$uid" : {
+        ".read": true,
+        ".write": true 
       }
     }
   }
