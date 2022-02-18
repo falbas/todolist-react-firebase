@@ -11,12 +11,14 @@ const TodoCreate = () => {
 
   const username = localStorage.getItem('username');
   const createTodo = () => {
-    const todoRef = firebase.database().ref('todos');
-    const todo = {
-      title: getTitle, complete: false, user: username
-    };
-    todoRef.push(todo);
-    setTitle('');
+    if (getTitle) {
+      const todoRef = firebase.database().ref('todos');
+      const todo = {
+        title: getTitle, complete: false, user: username
+      };
+      todoRef.push(todo);
+      setTitle('');
+    }
   }
 
   return (
