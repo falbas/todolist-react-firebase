@@ -17,7 +17,7 @@ const TodoList = () => {
       }
       setTodoList(todoList);
     });
-  }, []);
+  }, [username]);
 
   return (
     <div className="m-3">
