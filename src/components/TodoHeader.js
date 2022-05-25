@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { Nav, NavDropdown, Button, Modal, Form } from 'react-bootstrap'
+import { Nav, NavDropdown, Button } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
+
+import TodoImport from './TodoImport'
 
 const TodoHeader = () => {
   const login = localStorage.getItem('login')
@@ -42,26 +44,7 @@ const TodoHeader = () => {
           </Link>
         )}
       </Nav>
-      <Modal show={show} onHide={handleClose}>
-        <Form>
-          <Modal.Header closeButton>
-            <Modal.Title>Import Todo List</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form.Group controlId="importtodo" className="mb-3">
-              <Form.Control type="file" accept=".csv" />
-            </Form.Group>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Cancel
-            </Button>
-            <Button type="submit" variant="primary" onClick={handleClose}>
-              Import
-            </Button>
-          </Modal.Footer>
-        </Form>
-      </Modal>
+      <TodoImport show={show} handleClose={handleClose}/>
     </>
   )
 }
