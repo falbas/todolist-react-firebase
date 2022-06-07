@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 
-const Iklan = ({iklan}) => {
-  const [show, setShow] = useState(iklan % 2)
+const Iklan = () => {
+  const [show, setShow] = useState(true)
 
   const handleClose = () => setShow(false)
 

@@ -1,4 +1,5 @@
 import Todo from './Todo';
+import Iklan from './Iklan';
 
 import { useEffect, useState } from 'react';
 import firebase from '../firebase';
@@ -27,6 +28,7 @@ const TodoList = () => {
           Your todo list is empty
         </div>
       }
+      {getTodoList.length % 2 === 0 && <Iklan />}
     </div>
   );
 };
